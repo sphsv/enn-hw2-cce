@@ -1,0 +1,12 @@
+{
+  "test_data": "gemma2",
+  "num_tokens": 8192,
+  "vocab_size": 256000,
+  "hidden_dim": 2304,
+  "dtype": "bfloat16",
+  "softcap": 30.0,
+  "filter_threshold": 0.000244140625,
+  "first_rank_below_threshold": 37,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "official_commit": "3de376c106a1916bc5e1b619f9c77c87a461ee1c"
+}

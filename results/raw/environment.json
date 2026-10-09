@@ -1,0 +1,173 @@
+{
+  "captured_at": "2026-10-07T21:24:58.161843+00:00",
+  "commit_matches_config": true,
+  "config": {
+    "correctness": {
+      "atol": 0.005,
+      "cases": [
+        {
+          "hidden_dim": 256,
+          "num_tokens": 128,
+          "seed": 7,
+          "vocab_size": 4096
+        },
+        {
+          "hidden_dim": 512,
+          "num_tokens": 256,
+          "seed": 19,
+          "vocab_size": 8192
+        },
+        {
+          "hidden_dim": 512,
+          "num_tokens": 512,
+          "seed": 101,
+          "vocab_size": 16384
+        }
+      ],
+      "rtol": 0.05
+    },
+    "dtype": "bfloat16",
+    "figure3": {
+      "chunk_size": 16,
+      "filter_threshold": "bf16_eps_div_32",
+      "test_data": "gemma2"
+    },
+    "figure4_gemma_training": {
+      "attention_implementation": "eager",
+      "confidence_level": 0.95,
+      "dataset_name": "alpaca",
+      "dtype": "bfloat16",
+      "eval_strategy": "no",
+      "gradient_accumulation_steps": 4,
+      "gradient_checkpointing": true,
+      "implementations": [
+        "cce",
+        "torch_compile"
+      ],
+      "learning_rate": 2e-05,
+      "max_steps": 700,
+      "model_name": "gemma2",
+      "paper_global_batch_size": 64,
+      "paper_gpu_count": 8,
+      "per_device_train_batch_size": 2,
+      "plot_smoothing_window": 20,
+      "save_strategy": "no",
+      "seeds": [
+        7,
+        19,
+        42,
+        101,
+        20241113
+      ],
+      "single_gpu_global_batch_size": 8
+    },
+    "filtering": {
+      "hidden_dim": 1024,
+      "num_tokens": 2048,
+      "repetitions": 20,
+      "seeds": [
+        7,
+        19,
+        101
+      ],
+      "vocab_size": 256000,
+      "warmups": 2
+    },
+    "official_benchmark": {
+      "hidden_dim": 2304,
+      "iterations": 50,
+      "kinds": [
+        "loss-fw",
+        "loss-bw",
+        "loss-fw-bw"
+      ],
+      "methods": [
+        "cce",
+        "torch_compile",
+        "baseline"
+      ],
+      "num_tokens": 8192,
+      "repetitions": 3,
+      "softcap": 30.0,
+      "test_data": "gemma2",
+      "vocab_size": 256000
+    },
+    "official_commit": "3de376c106a1916bc5e1b619f9c77c87a461ee1c",
+    "scaling": {
+      "hidden_dim": 1024,
+      "methods": [
+        "baseline",
+        "torch_compile",
+        "cce"
+      ],
+      "num_tokens": 2048,
+      "operations": [
+        "forward",
+        "backward",
+        "forward_backward"
+      ],
+      "repetitions": 20,
+      "seed": 20241113,
+      "vocab_sizes": [
+        32000,
+        64000,
+        128000,
+        256000
+      ],
+      "warmups": 2
+    },
+    "seed": 20241113,
+    "table1_extended": {
+      "iterations": 20,
+      "kinds": [
+        "loss-fw",
+        "loss-bw",
+        "loss-fw-bw"
+      ],
+      "methods": [
+        "cce",
+        "liger",
+        "torchtune_8_chunks",
+        "torch_compile",
+        "baseline",
+        "cce_no_vocab_sort",
+        "cce_no_grad_filter",
+        "cce_kahan",
+        "cce_kahan_full_c",
+        "cce_kahan_full_e"
+      ],
+      "repetitions": 5,
+      "test_data": "gemma2"
+    }
+  },
+  "expected_official_commit": "3de376c106a1916bc5e1b619f9c77c87a461ee1c",
+  "gpu_query": "0, NVIDIA A100-SXM4-80GB, 81920, 580.159.03",
+  "nvidia_smi_header": "Thu Oct  8 00:24:58 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.159.03             Driver Version: 580.159.03     CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                    0 |\n| N/A   27C    P0             52W /  500W |       0MiB /  81920MiB |      0%      Default |\n|                                         |                        |             Disabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+",
+  "official_commit": "3de376c106a1916bc5e1b619f9c77c87a461ee1c",
+  "official_commit_date": "2026-09-11T15:51:15+00:00",
+  "official_repo": "external/ml-cross-entropy",
+  "official_tracked_tree_clean": true,
+  "os": "Linux-5.4.210-39.1.pagevecsize-x86_64-with-glibc2.39",
+  "packages": {
+    "accelerate": "1.10.1",
+    "cut-cross-entropy": "25.9.3",
+    "datasets": "3.6.0",
+    "deepspeed": null,
+    "fire": "0.7.1",
+    "huggingface-hub": "0.36.0",
+    "liger-kernel": "0.8.3",
+    "matplotlib": "3.10.7",
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "pytest": "8.4.2",
+    "tokenizers": "0.21.4",
+    "torch": "2.9.1",
+    "torchao": "0.15.0",
+    "torchtune": "0.3.1",
+    "tqdm": "4.67.1",
+    "transformers": "4.48.2",
+    "triton": "3.5.1"
+  },
+  "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+  "seed": 20241113
+}

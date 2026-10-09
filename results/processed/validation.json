@@ -1,0 +1,8 @@
+{
+  "status": "ok",
+  "validated_at_utc": "2026-10-09T17:39:51.501150+00:00",
+  "table1_rows": 135,
+  "scaling_rows": 720,
+  "figure4_runs": 10,
+  "figure4_steps_per_run": 700
+}

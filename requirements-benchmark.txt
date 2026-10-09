@@ -1,0 +1,20 @@
+# The GPU machine currently reuses its existing torch/triton stack:
+# torch==2.9.1+cu128 and triton==3.5.1. For a clean paper-era environment,
+# install torch==2.4.1 from the CUDA 12.4 index first, then these packages.
+pandas==2.3.3
+fire==0.7.1
+tqdm==4.67.1
+matplotlib==3.10.7
+pytest==8.4.2
+liger-kernel==0.8.3
+# Paper-era official TorchTune release. torchao is an import prerequisite;
+# CEWithChunkedOutputLoss itself does not use quantization in this benchmark.
+torchtune==0.3.1
+torchao==0.15.0
+# The official benchmark imports training/data modules even for test_data=randn.
+# Keep the versions compatible with the upstream optional dependency.
+transformers==4.48.2
+datasets==3.6.0
+huggingface-hub==0.36.0
+tokenizers==0.21.4
+accelerate==1.10.1

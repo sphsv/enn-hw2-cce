@@ -1,0 +1,269 @@
+{
+  "cases": [
+    {
+      "comparisons_to_baseline": {
+        "cce": {
+          "classifier_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 1.0000001192092896,
+            "max_abs_error": 2.384185791015625e-07,
+            "mean_abs_error": 3.083185443064629e-11,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 3.7395881425353203e-06,
+            "rtol": 0.05
+          },
+          "embedding_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 0.9999756813049316,
+            "max_abs_error": 0.00018310546875,
+            "mean_abs_error": 7.67486562835984e-06,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.006975504667849774,
+            "rtol": 0.05
+          },
+          "loss": {
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "cce_exact": {
+          "classifier_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 1.0000001192092896,
+            "max_abs_error": 1.1920928955078125e-07,
+            "mean_abs_error": 4.3823160378320125e-11,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 3.994634442650556e-06,
+            "rtol": 0.05
+          },
+          "embedding_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 1.0000001192092896,
+            "max_abs_error": 3.0517578125e-05,
+            "mean_abs_error": 1.0235066127961545e-08,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.00018994740632310287,
+            "rtol": 0.05
+          },
+          "loss": {
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "torch_compile": {
+          "classifier_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 1.0000001192092896,
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.0,
+            "rtol": 0.05
+          },
+          "embedding_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.0,
+            "rtol": 0.05
+          },
+          "loss": {
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        }
+      },
+      "dtype": "bfloat16",
+      "hidden_dim": 256,
+      "losses": {
+        "baseline": 8.714044570922852,
+        "cce": 8.714044570922852,
+        "cce_exact": 8.714044570922852,
+        "torch_compile": 8.714044570922852
+      },
+      "num_tokens": 128,
+      "seed": 7,
+      "vocab_size": 4096
+    },
+    {
+      "comparisons_to_baseline": {
+        "cce": {
+          "classifier_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 0.9999978542327881,
+            "max_abs_error": 1.52587890625e-05,
+            "mean_abs_error": 2.2992445281033724e-08,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.0020688701355585253,
+            "rtol": 0.05
+          },
+          "embedding_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 0.9999500513076782,
+            "max_abs_error": 0.0001068115234375,
+            "mean_abs_error": 4.645265107683372e-06,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.009998822728467697,
+            "rtol": 0.05
+          },
+          "loss": {
+            "absolute_error": 9.5367431640625e-07,
+            "relative_error": 1.0055688402372338e-07
+          }
+        },
+        "cce_exact": {
+          "classifier_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 1.0000001192092896,
+            "max_abs_error": 3.814697265625e-06,
+            "mean_abs_error": 3.042707752420881e-11,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 1.5343474553453607e-05,
+            "rtol": 0.05
+          },
+          "embedding_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 0.9999959468841553,
+            "max_abs_error": 1.52587890625e-05,
+            "mean_abs_error": 9.195613301926642e-07,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.0028444351496773545,
+            "rtol": 0.05
+          },
+          "loss": {
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "torch_compile": {
+          "classifier_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 1.000000238418579,
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.0,
+            "rtol": 0.05
+          },
+          "embedding_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 1.0,
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.0,
+            "rtol": 0.05
+          },
+          "loss": {
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        }
+      },
+      "dtype": "bfloat16",
+      "hidden_dim": 512,
+      "losses": {
+        "baseline": 9.483928680419922,
+        "cce": 9.483929634094238,
+        "cce_exact": 9.483928680419922,
+        "torch_compile": 9.483928680419922
+      },
+      "num_tokens": 256,
+      "seed": 19,
+      "vocab_size": 8192
+    },
+    {
+      "comparisons_to_baseline": {
+        "cce": {
+          "classifier_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 0.9999980926513672,
+            "max_abs_error": 1.52587890625e-05,
+            "mean_abs_error": 1.1693165546944329e-08,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.0019127312331653126,
+            "rtol": 0.05
+          },
+          "embedding_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 0.9998472332954407,
+            "max_abs_error": 6.4849853515625e-05,
+            "mean_abs_error": 4.2179826778010465e-06,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.01748486708694885,
+            "rtol": 0.05
+          },
+          "loss": {
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "cce_exact": {
+          "classifier_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 0.9999999403953552,
+            "max_abs_error": 3.814697265625e-06,
+            "mean_abs_error": 1.8052299238791036e-11,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 3.609075054875996e-05,
+            "rtol": 0.05
+          },
+          "embedding_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 0.9999959468841553,
+            "max_abs_error": 7.62939453125e-06,
+            "mean_abs_error": 4.6329157044056046e-07,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 0.00287288054389997,
+            "rtol": 0.05
+          },
+          "loss": {
+            "absolute_error": 9.5367431640625e-07,
+            "relative_error": 9.354830984397638e-08
+          }
+        },
+        "torch_compile": {
+          "classifier_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 0.9999999403953552,
+            "max_abs_error": 1.4901161193847656e-08,
+            "mean_abs_error": 1.218339665265411e-13,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 3.4400994709639345e-07,
+            "rtol": 0.05
+          },
+          "embedding_gradient": {
+            "atol": 0.005,
+            "cosine_similarity": 1.0,
+            "max_abs_error": 9.5367431640625e-07,
+            "mean_abs_error": 3.637978807091713e-12,
+            "passes_loose_tolerance": true,
+            "relative_l2_error": 4.540676515394029e-06,
+            "rtol": 0.05
+          },
+          "loss": {
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        }
+      },
+      "dtype": "bfloat16",
+      "hidden_dim": 512,
+      "losses": {
+        "baseline": 10.1944580078125,
+        "cce": 10.1944580078125,
+        "cce_exact": 10.194457054138184,
+        "torch_compile": 10.1944580078125
+      },
+      "num_tokens": 512,
+      "seed": 101,
+      "vocab_size": 16384
+    }
+  ],
+  "generated_at": "2026-10-07T21:25:01.303273+00:00",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "official_commit": "3de376c106a1916bc5e1b619f9c77c87a461ee1c",
+  "torch": "2.9.1+cu128"
+}

@@ -1,0 +1,34 @@
+{
+  "model": "google/gemma-2-2b-it",
+  "implementations": [
+    "cce",
+    "torch_compile"
+  ],
+  "seeds": [
+    7,
+    19,
+    42,
+    101,
+    20241113
+  ],
+  "steps": 700,
+  "confidence_level": 0.95,
+  "paired_token_counts_match": true,
+  "mean_curve_pearson_r": 0.9999395130990689,
+  "mean_curve_rmse": 0.0009275676332676414,
+  "mean_curve_mae": 0.0007005714285714434,
+  "mean_curve_max_abs_diff": 0.006159999999999943,
+  "cce_last50_mean_loss": 1.0415448,
+  "torch_compile_last50_mean_loss": 1.0409992,
+  "last50_mean_delta_cce_minus_torch_compile": 0.0005456000000000127,
+  "paired_seed_last50_mean_deltas": {
+    "7": 0.00034400000000000874,
+    "19": 0.0005420000000000269,
+    "42": 0.0005800000000000005,
+    "101": 0.0009020000000000006,
+    "20241113": 0.00035999999999998257
+  },
+  "paired_seed_last50_delta_mean": 0.0005456000000000039,
+  "paired_seed_last50_delta_ci95_low": 0.0002657142138954552,
+  "paired_seed_last50_delta_ci95_high": 0.0008254857861045527
+}

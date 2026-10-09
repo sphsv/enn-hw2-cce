@@ -1,0 +1,85 @@
+{
+  "official_commit": "3de376c106a1916bc5e1b619f9c77c87a461ee1c",
+  "seed": 20241113,
+  "dtype": "bfloat16",
+  "official_benchmark": {
+    "test_data": "gemma2",
+    "methods": ["cce", "torch_compile", "baseline"],
+    "kinds": ["loss-fw", "loss-bw", "loss-fw-bw"],
+    "iterations": 50,
+    "repetitions": 3,
+    "num_tokens": 8192,
+    "vocab_size": 256000,
+    "hidden_dim": 2304,
+    "softcap": 30.0
+  },
+  "table1_extended": {
+    "test_data": "gemma2",
+    "methods": [
+      "cce",
+      "liger",
+      "torchtune_8_chunks",
+      "torch_compile",
+      "baseline",
+      "cce_no_grad_filter",
+      "cce_kahan",
+      "cce_kahan_full_c",
+      "cce_kahan_full_e"
+    ],
+    "kinds": ["loss-fw", "loss-bw", "loss-fw-bw"],
+    "iterations": 20,
+    "repetitions": 5
+  },
+  "figure3": {
+    "test_data": "gemma2",
+    "chunk_size": 16,
+    "filter_threshold": "bf16_eps_div_32"
+  },
+  "correctness": {
+    "atol": 0.005,
+    "rtol": 0.05,
+    "cases": [
+      {"seed": 7, "num_tokens": 128, "vocab_size": 4096, "hidden_dim": 256},
+      {"seed": 19, "num_tokens": 256, "vocab_size": 8192, "hidden_dim": 512},
+      {"seed": 101, "num_tokens": 512, "vocab_size": 16384, "hidden_dim": 512}
+    ]
+  },
+  "scaling": {
+    "seed": 20241113,
+    "num_tokens": 2048,
+    "hidden_dim": 1024,
+    "vocab_sizes": [32000, 64000, 128000, 256000],
+    "methods": ["baseline", "torch_compile", "cce"],
+    "operations": ["forward", "backward", "forward_backward"],
+    "warmups": 2,
+    "repetitions": 20
+  },
+  "filtering": {
+    "seeds": [7, 19, 101],
+    "num_tokens": 2048,
+    "vocab_size": 256000,
+    "hidden_dim": 1024,
+    "warmups": 2,
+    "repetitions": 20
+  },
+  "figure4_gemma_training": {
+    "model_name": "gemma2",
+    "dataset_name": "alpaca",
+    "implementations": ["cce", "torch_compile"],
+    "seeds": [7, 19, 42, 101, 20241113],
+    "max_steps": 700,
+    "attention_implementation": "eager",
+    "dtype": "bfloat16",
+    "gradient_checkpointing": true,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 4,
+    "single_gpu_global_batch_size": 8,
+    "paper_gpu_count": 8,
+    "paper_global_batch_size": 64,
+    "learning_rate": 2e-5,
+    "save_strategy": "no",
+    "eval_strategy": "no",
+    "confidence_level": 0.95,
+    "plot_smoothing_window": 20
+  }
+}

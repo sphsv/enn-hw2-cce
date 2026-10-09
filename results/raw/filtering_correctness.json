@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "classifier_gradient": {
+        "atol": 0.005,
+        "cosine_similarity": 0.9999921321868896,
+        "max_abs_error": 4.76837158203125e-07,
+        "mean_abs_error": 2.4363185247011643e-08,
+        "passes_loose_tolerance": true,
+        "relative_l2_error": 0.003987884316074798,
+        "rtol": 0.05
+      },
+      "embedding_gradient": {
+        "atol": 0.005,
+        "cosine_similarity": 0.9998602271080017,
+        "max_abs_error": 9.626150131225586e-06,
+        "mean_abs_error": 1.0110052244272083e-06,
+        "passes_loose_tolerance": true,
+        "relative_l2_error": 0.016716346617861012,
+        "rtol": 0.05
+      },
+      "loss_absolute_error": 9.5367431640625e-07,
+      "loss_filtered": 12.99345588684082,
+      "loss_unfiltered": 12.993454933166504,
+      "seed": 7
+    },
+    {
+      "classifier_gradient": {
+        "atol": 0.005,
+        "cosine_similarity": 0.9999921321868896,
+        "max_abs_error": 9.5367431640625e-07,
+        "mean_abs_error": 2.431915469003343e-08,
+        "passes_loose_tolerance": true,
+        "relative_l2_error": 0.0039835991950989795,
+        "rtol": 0.05
+      },
+      "embedding_gradient": {
+        "atol": 0.005,
+        "cosine_similarity": 0.9998576641082764,
+        "max_abs_error": 8.910894393920898e-06,
+        "mean_abs_error": 1.0255962479277514e-06,
+        "passes_loose_tolerance": true,
+        "relative_l2_error": 0.016871516819687415,
+        "rtol": 0.05
+      },
+      "loss_absolute_error": 9.5367431640625e-07,
+      "loss_filtered": 12.942590713500977,
+      "loss_unfiltered": 12.942591667175293,
+      "seed": 19
+    },
+    {
+      "classifier_gradient": {
+        "atol": 0.005,
+        "cosine_similarity": 0.9999920129776001,
+        "max_abs_error": 9.5367431640625e-07,
+        "mean_abs_error": 2.437021429102515e-08,
+        "passes_loose_tolerance": true,
+        "relative_l2_error": 0.003986635612088343,
+        "rtol": 0.05
+      },
+      "embedding_gradient": {
+        "atol": 0.005,
+        "cosine_similarity": 0.9998575448989868,
+        "max_abs_error": 8.672475814819336e-06,
+        "mean_abs_error": 1.0257206213282188e-06,
+        "passes_loose_tolerance": true,
+        "relative_l2_error": 0.01687818024419079,
+        "rtol": 0.05
+      },
+      "loss_absolute_error": 0.0,
+      "loss_filtered": 12.963287353515625,
+      "loss_unfiltered": 12.963287353515625,
+      "seed": 101
+    }
+  ]
+}

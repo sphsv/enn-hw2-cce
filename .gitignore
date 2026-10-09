@@ -1,0 +1,16 @@
+.venv/
+.cache/
+checkpoints/
+__pycache__/
+*.py[cod]
+external/
+.DS_Store
+presentation/cce_article_tex/
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.xdv
+*.synctex.gz
